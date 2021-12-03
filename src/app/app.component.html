@@ -1,0 +1,37 @@
+<hello name="{{ name }}"></hello>
+<p>Testing attributes data binding.</p>
+
+<model-viewer
+  id="dimension-demo"
+  ar
+  ar-modes="webxr"
+  ar-scale="fixed"
+  camera-orbit="-30deg auto auto"
+  max-camera-orbit="auto 100deg auto"
+  shadow-intensity="1"
+  camera-controls
+  src="{{ src }}"
+  alt="A 3D model of an armchair."
+>
+  <div class="main">
+    <button
+      class="btn btn-dark button"
+      (click)="onClick()"
+      *ngIf="!show"
+      [@slideInOut]
+    >
+      <i class="bi bi-plus-circle" style="font-size:16px;"></i>
+    </button>
+
+    <div id="dialog" class="row" *ngIf="show" [@slideInOut]>
+      <button class="btn toggle float-right" (click)="onClick()">
+        <i class="bi bi-plus"></i>
+      </button>
+      <label>Similiar Products</label>
+      <div class="product">
+      
+      </div>
+    </div>
+  </div>
+</model-viewer>
+<!-- <app-open-close></app-open-close> -->
