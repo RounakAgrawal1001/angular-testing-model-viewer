@@ -31,7 +31,8 @@ export class AppComponent {
   name = `Angular ${VERSION.major} testing model-viewer`;
 
   camera_orbit = '45deg 55deg 2.5m';
-  src = 'https://modelviewer.dev/shared-assets/models/Astronaut.glb';
+  src =
+    'https://res.cloudinary.com/mavericks-hackathon/image/upload/v1638993946/Personal/Dolls/Dolls_house_bedroom_z05pve.glb';
   show = false;
   name1: any = 'Hi This is Rounak';
   data: any = [
